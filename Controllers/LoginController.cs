@@ -39,6 +39,7 @@ namespace WebAppForDocker.Controllers
             {
                 var user = new UserDto { Name = login.Name, Password = login.Password,
                     Role = UserRoleDto.User };
+
                 _service.AddUser(user);
             }
             catch (Exception ex) { return StatusCode(500, ex.Message); }
